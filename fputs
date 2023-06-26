@@ -1,0 +1,17 @@
+#include<stdio.h>
+#include<stdlib.h>
+#include<string.h>
+int main()
+{
+    FILE *ptr;
+    char file[100];
+    char write[100];
+    printf("enter the file name:");
+    gets(file);
+    printf("enter string to write:");
+    gets(write);
+    ptr = fopen(file, "w");
+    fputs(write, ptr);
+    fclose(ptr);
+    return 0;
+}
